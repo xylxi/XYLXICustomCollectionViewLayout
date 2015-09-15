@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iY0-QB-1MF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="cXN-cL-8DV">
+            <objects>
+                <tableViewController id="cod-a0-e5F" customClass="CWMainTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="22" sectionFooterHeight="22" id="xFK-XY-hvT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="65" id="WSe-UN-27y">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WSe-UN-27y" id="0pF-77-DA1">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cod-a0-e5F" id="nhP-iB-brm"/>
+                            <outlet property="delegate" destination="cod-a0-e5F" id="ejH-PY-8Px"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="L4M-mc-vx2"/>
+                    <connections>
+                        <segue destination="VNc-aC-at0" kind="push" identifier="waterfall" id="n0c-3F-0u8"/>
+                        <segue destination="9r1-GJ-GKK" kind="push" identifier="iCarousel" id="H7H-v4-PrG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJs-LA-DD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="217"/>
+        </scene>
+        <!--卡片滑动缩放-->
+        <scene sceneID="S2G-z3-sCW">
+            <objects>
+                <collectionViewController id="9r1-GJ-GKK" customClass="CWICaroselCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9Ul-lZ-WQx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewLayout key="collectionViewLayout" id="6zw-LA-A3h" customClass="CWCarouselViewLayout"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CWCarouseCell" id="WRI-Vq-HNp" customClass="CWCarouseCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XNW-n3-eMt">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHY-rQ-QaF">
+                                            <rect key="frame" x="39" y="49" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="XNW-n3-eMt" firstAttribute="top" secondItem="WRI-Vq-HNp" secondAttribute="top" id="0ct-qd-C4V"/>
+                                    <constraint firstItem="XNW-n3-eMt" firstAttribute="leading" secondItem="WRI-Vq-HNp" secondAttribute="leading" id="13I-3h-fw1"/>
+                                    <constraint firstAttribute="trailing" secondItem="XNW-n3-eMt" secondAttribute="trailing" id="UbH-d7-j7X"/>
+                                    <constraint firstAttribute="centerY" secondItem="eHY-rQ-QaF" secondAttribute="centerY" constant="0.5" id="bfS-Bp-KFA"/>
+                                    <constraint firstAttribute="centerX" secondItem="eHY-rQ-QaF" secondAttribute="centerX" id="gfu-uS-cHZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNW-n3-eMt" secondAttribute="bottom" id="snb-h6-SNw"/>
+                                </constraints>
+                                <size key="customSize" width="120" height="120"/>
+                                <connections>
+                                    <outlet property="imagePic" destination="XNW-n3-eMt" id="e6H-1s-Uil"/>
+                                    <outlet property="indexLabel" destination="eHY-rQ-QaF" id="wTJ-gO-W6s"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="9r1-GJ-GKK" id="7Id-oL-OKM"/>
+                            <outlet property="delegate" destination="9r1-GJ-GKK" id="mBY-Ja-kSZ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="卡片滑动缩放" id="gDx-S5-7hs"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALZ-u2-GSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="529"/>
+        </scene>
+        <!--瀑布流-->
+        <scene sceneID="gbZ-uP-BSX">
+            <objects>
+                <collectionViewController id="VNc-aC-at0" customClass="CWWaterCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IRQ-NE-yEu" userLabel="cellForWaterFall">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kJK-sc-QI1" customClass="CWWaterFallLayout">
+                            <size key="itemSize" width="150" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CWWaterFallCell" id="8tm-M1-i8u" customClass="CWWaterFallCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-Kc-ZfG">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icQ-MK-sim">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="9w3-GU-Hwq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="9w3-GU-Hwq"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="9w3-GU-Hwq"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="icQ-MK-sim" firstAttribute="leading" secondItem="8tm-M1-i8u" secondAttribute="leading" id="DKr-Sn-Srr"/>
+                                    <constraint firstAttribute="bottom" secondItem="icQ-MK-sim" secondAttribute="bottom" constant="8" id="MM9-XW-IqQ">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="icQ-MK-sim" secondAttribute="trailing" id="O95-en-8Mj"/>
+                                    <constraint firstAttribute="bottom" secondItem="bQm-Kc-ZfG" secondAttribute="bottom" id="Zka-AY-4cQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bQm-Kc-ZfG" secondAttribute="trailing" id="q3T-QO-hi3"/>
+                                    <constraint firstItem="bQm-Kc-ZfG" firstAttribute="leading" secondItem="8tm-M1-i8u" secondAttribute="leading" id="qQj-E7-Q27"/>
+                                    <constraint firstItem="bQm-Kc-ZfG" firstAttribute="top" secondItem="8tm-M1-i8u" secondAttribute="top" id="v1r-x8-Xsf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="bQm-Kc-ZfG"/>
+                                        <exclude reference="icQ-MK-sim"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="DKr-Sn-Srr"/>
+                                        <exclude reference="MM9-XW-IqQ"/>
+                                        <exclude reference="O95-en-8Mj"/>
+                                        <exclude reference="Zka-AY-4cQ"/>
+                                        <exclude reference="q3T-QO-hi3"/>
+                                        <exclude reference="qQj-E7-Q27"/>
+                                        <exclude reference="v1r-x8-Xsf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="bQm-Kc-ZfG"/>
+                                        <include reference="icQ-MK-sim"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="DKr-Sn-Srr"/>
+                                        <include reference="MM9-XW-IqQ"/>
+                                        <include reference="O95-en-8Mj"/>
+                                        <include reference="Zka-AY-4cQ"/>
+                                        <include reference="q3T-QO-hi3"/>
+                                        <include reference="qQj-E7-Q27"/>
+                                        <include reference="v1r-x8-Xsf"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="imagePic" destination="bQm-Kc-ZfG" id="cuU-xM-eM1"/>
+                                    <outlet property="priceLabel" destination="icQ-MK-sim" id="m2e-cr-Rhe"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="VNc-aC-at0" id="2pm-eb-e7w"/>
+                            <outlet property="delegate" destination="VNc-aC-at0" id="UXH-wY-o9q"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="瀑布流" id="KMO-Fx-Lnm"/>
+                    <connections>
+                        <outlet property="waterFallLayout" destination="kJK-sc-QI1" id="BuD-lF-Vwg"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDq-Zn-ABz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.5" y="-143.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8P3-1e-jXY">
+            <objects>
+                <navigationController id="iY0-QB-1MF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="apJ-pk-Ani">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cod-a0-e5F" kind="relationship" relationship="rootViewController" id="1yj-Hj-6kS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tep-I5-I3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495" y="217"/>
+        </scene>
+    </scenes>
+</document>
