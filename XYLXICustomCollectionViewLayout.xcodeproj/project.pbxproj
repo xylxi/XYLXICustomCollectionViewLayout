@@ -41,6 +41,9 @@
 		3BB81D561BA7B8580089E37C /* ICarosel_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3BB81D531BA7B8580089E37C /* ICarosel_0.jpg */; };
 		3BB81D571BA7B8580089E37C /* ICarosel_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3BB81D541BA7B8580089E37C /* ICarosel_1.jpg */; };
 		3BB81D581BA7B8580089E37C /* ICarosel_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3BB81D551BA7B8580089E37C /* ICarosel_2.jpg */; };
+		3BB81D5B1BA7EE140089E37C /* CWCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB81D5A1BA7EE140089E37C /* CWCardViewLayout.m */; };
+		3BB81D5E1BA7F4360089E37C /* CWGardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB81D5D1BA7F4360089E37C /* CWGardCell.m */; };
+		3BB81D621BA7F4C00089E37C /* CWGardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB81D611BA7F4C00089E37C /* CWGardCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,12 @@
 		3BB81D531BA7B8580089E37C /* ICarosel_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ICarosel_0.jpg; sourceTree = "<group>"; };
 		3BB81D541BA7B8580089E37C /* ICarosel_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ICarosel_1.jpg; sourceTree = "<group>"; };
 		3BB81D551BA7B8580089E37C /* ICarosel_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ICarosel_2.jpg; sourceTree = "<group>"; };
+		3BB81D591BA7EE140089E37C /* CWCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCardViewLayout.h; sourceTree = "<group>"; };
+		3BB81D5A1BA7EE140089E37C /* CWCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCardViewLayout.m; sourceTree = "<group>"; };
+		3BB81D5C1BA7F4360089E37C /* CWGardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWGardCell.h; sourceTree = "<group>"; };
+		3BB81D5D1BA7F4360089E37C /* CWGardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWGardCell.m; sourceTree = "<group>"; };
+		3BB81D601BA7F4C00089E37C /* CWGardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWGardCollectionViewController.h; sourceTree = "<group>"; };
+		3BB81D611BA7F4C00089E37C /* CWGardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWGardCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +216,8 @@
 				3BB81D0C1BA693720089E37C /* CWWaterFallLayout.m */,
 				3BB81D4A1BA6DDE50089E37C /* CWCarouselViewLayout.h */,
 				3BB81D4B1BA6DDE50089E37C /* CWCarouselViewLayout.m */,
+				3BB81D591BA7EE140089E37C /* CWCardViewLayout.h */,
+				3BB81D5A1BA7EE140089E37C /* CWCardViewLayout.m */,
 			);
 			name = CollectionLayout;
 			sourceTree = "<group>";
@@ -218,6 +229,8 @@
 				3BB81D0F1BA6945C0089E37C /* CWWaterFallCell.m */,
 				3BB81D4D1BA6DE8B0089E37C /* CWCarouseCell.h */,
 				3BB81D4E1BA6DE8B0089E37C /* CWCarouseCell.m */,
+				3BB81D5C1BA7F4360089E37C /* CWGardCell.h */,
+				3BB81D5D1BA7F4360089E37C /* CWGardCell.m */,
 			);
 			name = CollecitionViewCell;
 			sourceTree = "<group>";
@@ -244,6 +257,7 @@
 				3BB81D081BA692C30089E37C /* HomeVC */,
 				3BB81D0A1BA692D70089E37C /* iCaroselVC */,
 				3BB81D091BA692CB0089E37C /* WaterfallVC */,
+				3BB81D5F1BA7F4A10089E37C /* GardTransform */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -322,6 +336,15 @@
 				3BB81D3B1BA696890089E37C /* UIView+WebCacheOperation.m */,
 			);
 			name = Lib;
+			sourceTree = "<group>";
+		};
+		3BB81D5F1BA7F4A10089E37C /* GardTransform */ = {
+			isa = PBXGroup;
+			children = (
+				3BB81D601BA7F4C00089E37C /* CWGardCollectionViewController.h */,
+				3BB81D611BA7F4C00089E37C /* CWGardCollectionViewController.m */,
+			);
+			name = GardTransform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +466,7 @@
 				3BB81D441BA696890089E37C /* UIButton+WebCache.m in Sources */,
 				3BB81D3C1BA696890089E37C /* NSData+ImageContentType.m in Sources */,
 				3BB81D431BA696890089E37C /* SDWebImagePrefetcher.m in Sources */,
+				3BB81D5B1BA7EE140089E37C /* CWCardViewLayout.m in Sources */,
 				3BB81D491BA696890089E37C /* UIView+WebCacheOperation.m in Sources */,
 				3BB81D401BA696890089E37C /* SDWebImageDownloader.m in Sources */,
 				3BB81D071BA6903C0089E37C /* CWMainTableViewController.m in Sources */,
@@ -451,10 +475,12 @@
 				3BB81CE01BA68F8D0089E37C /* AppDelegate.m in Sources */,
 				3BB81D4C1BA6DDE50089E37C /* CWCarouselViewLayout.m in Sources */,
 				3BB81D3E1BA696890089E37C /* SDWebImageCompat.m in Sources */,
+				3BB81D5E1BA7F4360089E37C /* CWGardCell.m in Sources */,
 				3BB81D131BA694BE0089E37C /* CWWaterCollectionViewController.m in Sources */,
 				3BB81CDD1BA68F8D0089E37C /* main.m in Sources */,
 				3BB81D461BA696890089E37C /* UIImage+MultiFormat.m in Sources */,
 				3BB81D451BA696890089E37C /* UIImage+GIF.m in Sources */,
+				3BB81D621BA7F4C00089E37C /* CWGardCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

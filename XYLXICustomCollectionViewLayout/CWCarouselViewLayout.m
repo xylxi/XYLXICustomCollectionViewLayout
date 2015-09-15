@@ -33,7 +33,7 @@
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
     NSInteger cellCount = [self.collectionView numberOfItemsInSection:0];
-    // 指的是，collectionView的哪个点出现在控制器view的中心位置
+    // 指的是，collectionView的内容哪个点出现在collectionView能显示view的中心位置
     CGFloat centerY = self.collectionView.contentOffset.y + _viewHeight / 2;
     /**
      *  这个方法里主要确认了当前rect中
@@ -41,11 +41,11 @@
      */
     // 当前滑动到的中心cell是下标
     NSInteger index = centerY / _itemHeight;
-    // 一个屏幕能显示几个
+    // 一个collectionView能显示几个
     NSInteger count = _viewHeight / _itemHeight;
-    // 屏幕中显示的最小的cell下标
+    // collectionView能显示屏幕中显示的最小的cell下标
     NSInteger minIndex = MAX(0, (index - count));
-    // 屏幕中显示的最大的cell下标
+    // collectionView能显示屏幕中显示的最大的cell下标
     NSInteger maxIndex = MIN((cellCount - 1), (index + count));
     // 创建对应的UICollectionViewLayoutAttributes属性
     NSMutableArray *arr = [NSMutableArray array];

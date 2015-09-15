@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.layoutTypeArr = @[@"waterfall",@"iCarousel"];
+    self.layoutTypeArr = @[@"waterfall",@"iCarousel",@"CWCardViewLayout"];
 }
 
 - (void)didReceiveMemoryWarning {
